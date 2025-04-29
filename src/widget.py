@@ -10,3 +10,9 @@ def mask_account_card(card_info: str) -> str:
         return card_info.replace(number_card, "**" + number_card[-4:])
 
     return card_info.replace(number_card, number_card[:4] + " " + number_card[4:6] + "** **** " + number_card[-4:])
+
+
+def get_date(date: str) -> str:
+    """Функция, которая возвращает дату в формате ДД.ММ.ГГГГ"""
+
+    return date[8:10] + "." + date[5:7] + "." + date[:4]
