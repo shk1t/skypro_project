@@ -16,6 +16,3 @@ def get_date(date: str) -> str:
     """Функция, которая возвращает дату в формате ДД.ММ.ГГГГ"""
 
     return date[8:10] + "." + date[5:7] + "." + date[:4]
-
-
-print(mask_account_card("Maestro 7000792289606361"), mask_account_card("Счет 73654108430135874305"))
