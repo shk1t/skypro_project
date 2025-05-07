@@ -3,13 +3,21 @@
 разработка фичи, которая показывает несколько последних успешных банковских операций клиента.
 # инструкция по установке
 1. клонирование репозитория 
-```git clone git@github.com:shk1t/skypro_project.git```
+```
+git clone git@github.com:shk1t/skypro_project.git
+```
 2. проверка poetry
-```poetry --version```
+```
+poetry --version
+```
 3. установка зависимостей проекта
-```poetry install```
+```
+poetry install
+```
 4. активация окружения
-```poetry shell```
+```
+poetry shell
+```
 # модули проекта
 # main.py
 ## основной модуль проекта, в котором вызываются функции
@@ -91,7 +99,7 @@ if __name__ == "__main__":
 **возвращает:**
 отсортированный список словарей по дате
 ## пример вызова в модуле main.py
-```python
+```
 import processing as pr
 
 
@@ -109,4 +117,23 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+```
+
+# тестирование
+## структура тестов:
+ • `test_masks.py`
+
+**проверяет корректность работы функций get_mask_card_number(), get_mask_account() из модуля masks.py:**
+
+ • `test_widget.py`
+
+**тестирует функции mask_account_card(), get_date() из модуля widget.py:**
+
+ • `test_processing.py`
+
+**проверяет фильтрацию операций по статусу filter_by_state() из модуля processing.py:**
+
+# для запуска всех тестов из корня проекта используйте команду:
+```
+pytest
 ```
