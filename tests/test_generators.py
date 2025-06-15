@@ -53,13 +53,13 @@ def transactions():
     ]
 
 
-def test_filter_by_currency_usd():
+def test_filter_by_currency_usd(transactions):
     result = list(gn.filter_by_currency(transactions, "USD"))
     assert len(result) == 3
     assert all(t["operationAmount"]["currency"]["code"] == "USD" for t in result)
 
 
-def test_filter_by_currency_no_match():
+def test_filter_by_currency_no_match(transactions):
     result = list(gn.filter_by_currency(transactions, "JPY"))
     assert result == []
 
@@ -69,7 +69,7 @@ def test_filter_by_currency_empty_input():
     assert result == []
 
 
-def test_transaction_descriptions_normal():
+def test_transaction_descriptions_normal(transactions):
     result = list(gn.transaction_descriptions(transactions))
     assert result == [
         "Перевод организации",
