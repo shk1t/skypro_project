@@ -28,7 +28,6 @@ venv/
 .pylint.d/
 
 # Coverage reports
-htmlcov/
 .coverage
 .coverage.*
 .cache

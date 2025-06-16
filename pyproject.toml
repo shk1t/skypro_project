@@ -15,12 +15,13 @@ flake8 = "^7.1.2"
 mypy = "^1.15.0"
 black = "^25.1.0"
 isort = "^6.0.1"
-
+docformatter = "^1.7.7"
 
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
 pytest-cov = "^6.1.1"
+
 
 [build-system]
 requires = ["poetry-core"]
@@ -40,3 +41,11 @@ exclude = ".git"
 
 [tool.isort]
 line_length = 119
+profile = "black"
+
+
+[tool.docformatter]
+in-place = true
+wrap-summaries = 119
+wrap-descriptions = 119
+pre-summary-newline = true

@@ -5,7 +5,7 @@ def mask_account_card(card_info: str) -> str:
     """Функция, которая возвращает маску номера карты вместе с названием"""
 
     number_card = (
-        card_info[card_info.index(next(i for i in card_info if i.isdigit())) :] if type(card_info) == str else ""
+        card_info[card_info.index(next(i for i in card_info if i.isdigit())):] if isinstance(card_info, str) else ""
     )
 
     if number_card.isdigit():
@@ -22,4 +22,8 @@ def mask_account_card(card_info: str) -> str:
 def get_date(date: str) -> str:
     """Функция, которая возвращает дату в формате ДД.ММ.ГГГГ"""
 
-    return date[8:10] + "." + date[5:7] + "." + date[:4] if isinstance(date, str) and len(date) == 26 else "Некорректные данные"
+    return (
+        date[8:10] + "." + date[5:7] + "." + date[:4]
+        if isinstance(date, str) and len(date) == 26
+        else "Некорректные данные"
+    )
