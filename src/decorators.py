@@ -1,11 +1,11 @@
-from typing import Callable, Optional, Any
 from functools import wraps
+from typing import Any, Callable, Optional
 
 
 def log(filename: Optional[str] = None) -> Callable:
     def inner(func: Callable) -> Callable:
         @wraps(func)
-        def wrapper(*args, **kwargs) -> Any:
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
             try:
                 result = func(*args, **kwargs)
                 message = f"{func.__name__} ok"

@@ -1,5 +1,6 @@
-import src.generators as gn
 import pytest
+
+import src.generators as gn
 
 
 @pytest.fixture
