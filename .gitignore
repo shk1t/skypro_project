@@ -10,7 +10,7 @@ __pycache__/
 .venv/
 env/
 venv/
-
+.env
 # Poetry lock and cache (если используешь глобально, то это ок)
 # Можно оставить poetry.lock в репозитории
 # .python-version  # если используешь pyenv
