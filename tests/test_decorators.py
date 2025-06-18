@@ -13,6 +13,7 @@ def test_success_log_to_console(capsys):
     @log()
     def double(x):
         return x * 2
+
     double(2)
     captured = capsys.readouterr()
     assert "double ok" in captured.out
