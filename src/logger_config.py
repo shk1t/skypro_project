@@ -1,7 +1,7 @@
 import logging
 
 
-def setup_logger(name: str, filename: str, level=logging.INFO) -> logging.Logger:
+def setup_logger(name: str, filename: str, level: int = logging.INFO) -> logging.Logger:
     """Создает и возвращает логгер, который записывает в файл"""
 
     logger = logging.getLogger(name)

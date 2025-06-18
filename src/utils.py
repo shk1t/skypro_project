@@ -1,6 +1,5 @@
 import json
-import logging
-from logger_config import setup_logger
+from src.logger_config import setup_logger
 from typing import Optional
 
 logger = setup_logger("utils.py", "logs/utils.log")
