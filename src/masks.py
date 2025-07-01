@@ -1,6 +1,5 @@
 from src.logger_config import setup_logger
 
-
 logger = setup_logger("masks.py", "logs/masks.log")
 
 
@@ -35,6 +34,3 @@ def get_mask_account(account_number: int) -> str:
     except Exception as e:
         logger.error(f"Ошибка в get_mask_account: {e}")
         return "Ошибка при обработке"
-
-get_mask_card_number(7000792289606361)
-get_mask_account(73654108430135874305)
