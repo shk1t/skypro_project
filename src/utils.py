@@ -1,6 +1,6 @@
 import json
 import pandas as pd
-from src.logger_config import setup_logger
+from logger_config import setup_logger
 from typing import Hashable, Any
 
 logger = setup_logger("utils.py", "logs/utils.log")
@@ -41,7 +41,7 @@ def load_transactions_csv(filename: str) -> list[dict[Hashable, Any]]:
         return []
 
 
-def load_transactions_excel(filename: str) -> list[dict[Hashable, Any]]:
+def load_transactions_xlsx(filename: str) -> list[dict[Hashable, Any]]:
     """
     Загружает список транзакций из EXCEL-файла.
     """

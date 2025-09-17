@@ -12,7 +12,7 @@ def filter_by_currency(transactions: list[dict], currency_code: str) -> Iterator
             "operationAmount" in transaction
             and "currency" in transaction["operationAmount"]
             and transaction["operationAmount"]["currency"]["code"] == currency_code.upper()
-        ):
+        ) or transaction["currency_code"] == currency_code.upper():
             yield transaction
 
 
